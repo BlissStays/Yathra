@@ -9,9 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:#0d1117;--surface:#161b22;--surface2:#1f2937;--border:#2d3748;
-    --accent:#f59e0b;--accent2:#10b981;--text:#f0f6fc;--muted:#8b949e;
-    --user-bubble:#1e3a5f;--bot-bubble:#1f2937;
+    --bg:#0D1B4B;--surface:#112058;--surface2:#172B6B;--border:#2A3E8F;
+    --accent:#E91E8C;--accent2:#10b981;--text:#FFFFFF;--muted:#94a3c8;
+    --user-bubble:#1A2E6E;--bot-bubble:#112058;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden;overscroll-behavior:none;-webkit-overflow-scrolling:touch;}
@@ -27,12 +27,12 @@
   .logo-sub{font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:1px;}
   .header-tabs{display:flex;gap:4px;}
   .tab-btn{padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:flex;align-items:center;gap:6px;}
-  .tab-btn.active{background:var(--accent);color:#000;border-color:var(--accent);font-weight:600;}
+  .tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600;}
   .tab-btn:hover:not(.active){border-color:var(--accent);color:var(--accent);}
   .header-right{display:flex;align-items:center;gap:8px;}
   .lang-switcher{display:flex;gap:4px;}
   .lang-btn{padding:4px 10px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
-  .lang-btn.active{background:var(--accent);color:#000;border-color:var(--accent);font-weight:500;}
+  .lang-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:500;}
   .lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent);}
 
   /* VIEWS */
@@ -47,11 +47,11 @@
   @keyframes fadeSlideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
   .message.user{align-self:flex-end;flex-direction:row-reverse;}
   .avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:4px;}
-  .bot .avatar{background:var(--accent);color:#000;}
+  .bot .avatar{background:var(--accent);color:#fff;}
   .user .avatar{background:var(--user-bubble);color:var(--text);}
   .bubble{padding:12px 16px;border-radius:16px;font-size:14px;line-height:1.6;max-width:620px;}
   .bot .bubble{background:var(--bot-bubble);border:1px solid var(--border);border-top-left-radius:4px;}
-  .user .bubble{background:var(--user-bubble);border:1px solid #2d4a6e;border-top-right-radius:4px;}
+  .user .bubble{background:var(--user-bubble);border:1px solid #2A3E8F;border-top-right-radius:4px;}
 
   /* RESULTS */
   .results-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:4px;max-width:640px;}
@@ -73,13 +73,13 @@
   .badge-sleeper{background:rgba(252,129,74,.15);color:#fc8181;border:1px solid rgba(252,129,74,.3);}
   .badge-express{background:rgba(236,72,153,.15);color:#f687b3;border:1px solid rgba(236,72,153,.3);}
   .badge-semi{background:rgba(113,128,150,.15);color:#a0aec0;border:1px solid rgba(113,128,150,.3);}
-  .badge-luxury{background:rgba(245,158,11,.15);color:#f6ad55;border:1px solid rgba(245,158,11,.3);}
+  .badge-luxury{background:rgba(233,30,140,.15);color:#f6ad55;border:1px solid rgba(233,30,140,.3);}
   .badge-normal{background:rgba(113,128,150,.1);color:#718096;border:1px solid rgba(113,128,150,.2);}
   .bus-details{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;}
   .bus-detail-item{display:flex;align-items:center;gap:3px;}
   .bus-meta-row{display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap;}
   .seats-badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
-  .seats-ok{background:#1a2f1a;color:var(--accent2);}
+  .seats-ok{background:#0D2840;color:var(--accent2);}
   .seats-low{background:#2f1a1a;color:#f87171;}
   .star-rating{display:flex;align-items:center;gap:4px;font-size:12px;}
   .stars{color:var(--accent);}
@@ -88,8 +88,8 @@
   .price-amount{font-family:'Playfair Display',serif;font-size:20px;color:var(--accent);font-weight:700;}
   .price-label{font-size:11px;color:var(--muted);}
   .view-btn{display:block;margin-top:8px;padding:6px 14px;background:transparent;color:var(--accent);border:1px solid var(--accent);border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;white-space:nowrap;text-align:center;}
-  .view-btn:hover{background:var(--accent);color:#000;}
-  .bus-expanded-panel{border-top:1px solid var(--border);background:#0f1923;}
+  .view-btn:hover{background:var(--accent);color:#fff;}
+  .bus-expanded-panel{border-top:1px solid var(--border);background:#080E30;}
   .expanded-inner{display:grid;grid-template-columns:1fr 1fr;}
   .exp-left{padding:16px;border-right:1px solid var(--border);}
   .exp-right{padding:16px;}
@@ -112,17 +112,17 @@
   .seat-row{display:flex;align-items:center;gap:3px;}
   .seat-aisle{width:12px;flex-shrink:0;}
   .seat{width:26px;height:26px;border-radius:4px 4px 2px 2px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--muted);transition:all .12s;flex-shrink:0;}
-  .seat:hover:not(.taken){border-color:var(--accent);background:rgba(245,158,11,.15);color:var(--accent);}
+  .seat:hover:not(.taken){border-color:var(--accent);background:rgba(233,30,140,.15);color:var(--accent);}
   .seat.taken{background:#1a1010;border-color:#3a2020;cursor:not-allowed;color:#3a2020;}
-  .seat.selected{background:var(--accent);border-color:var(--accent);color:#000;font-weight:700;}
+  .seat.selected{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700;}
   .seat-info{margin-top:10px;font-size:12px;color:var(--muted);min-height:18px;}
   .seat-info strong{color:var(--accent);}
-  .book-btn-full{width:100%;margin-top:10px;padding:11px;background:var(--accent);color:#000;border:none;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
-  .book-btn-full:hover:not(:disabled){background:#fbbf24;transform:translateY(-1px);}
+  .book-btn-full{width:100%;margin-top:10px;padding:11px;background:var(--accent);color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
+  .book-btn-full:hover:not(:disabled){background:#FF4DAE;transform:translateY(-1px);}
   .book-btn-full:disabled{opacity:.4;cursor:not-allowed;}
   .quick-replies{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
   .quick-reply{padding:7px 14px;border:1px solid var(--border);border-radius:20px;background:transparent;color:var(--text);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
-  .quick-reply:hover{border-color:var(--accent);color:var(--accent);background:rgba(245,158,11,.08);}
+  .quick-reply:hover{border-color:var(--accent);color:var(--accent);background:rgba(233,30,140,.08);}
   .typing{display:flex;align-items:center;gap:4px;padding:12px 16px;}
   .typing span{width:7px;height:7px;background:var(--muted);border-radius:50%;animation:bounce 1.2s infinite;}
   .typing span:nth-child(2){animation-delay:.15s}.typing span:nth-child(3){animation-delay:.3s}
@@ -132,8 +132,8 @@
   .input-box{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:12px 16px;color:var(--text);font-size:16px;font-family:'DM Sans',sans-serif;resize:none;min-height:48px;max-height:120px;outline:none;transition:border-color .2s;line-height:1.5;}
   .input-box:focus{border-color:var(--accent);}
   .input-box::placeholder{color:var(--muted);}
-  .send-btn{width:48px;height:48px;background:var(--accent);border:none;border-radius:12px;color:#000;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .15s;flex-shrink:0;}
-  .send-btn:hover{background:#fbbf24;transform:scale(1.05);}
+  .send-btn{width:48px;height:48px;background:var(--accent);border:none;border-radius:12px;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .15s;flex-shrink:0;}
+  .send-btn:hover{background:#FF4DAE;transform:scale(1.05);}
   .send-btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
 
   /* MODAL */
@@ -159,14 +159,14 @@
   .form-input:focus{border-color:var(--accent);}
   .form-input::placeholder{color:var(--muted);}
   .form-input.error{border-color:#f87171;}
-  .pay-btn{width:100%;padding:14px;background:var(--accent);color:#000;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
-  .pay-btn:hover{background:#fbbf24;transform:translateY(-1px);box-shadow:0 4px 20px rgba(245,158,11,.3);}
+  .pay-btn{width:100%;padding:14px;background:var(--accent);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+  .pay-btn:hover{background:#FF4DAE;transform:translateY(-1px);box-shadow:0 4px 20px rgba(233,30,140,.3);}
   .pay-note{text-align:center;font-size:11px;color:var(--muted);margin-top:8px;}
 
   /* PENDING */
-  .payment-pending-card{background:var(--surface);border:1px solid #2d4a1e;border-radius:16px;padding:20px;max-width:440px;}
+  .payment-pending-card{background:var(--surface);border:1px solid rgba(233,30,140,.35);border-radius:16px;padding:20px;max-width:440px;}
   .pending-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
-  .pending-icon{width:36px;height:36px;border-radius:50%;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;font-size:18px;animation:pulse 2s infinite;}
+  .pending-icon{width:36px;height:36px;border-radius:50%;background:rgba(233,30,140,.15);display:flex;align-items:center;justify-content:center;font-size:18px;animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
   .pending-title{font-weight:600;font-size:15px;}
   .pending-subtitle{font-size:12px;color:var(--muted);}
@@ -182,7 +182,7 @@
   .pending-ref code{font-family:monospace;letter-spacing:1px;}
 
   /* CONFIRM */
-  .confirm-card{background:#0d2011;border:1px solid var(--accent2);border-radius:16px;padding:16px;max-width:420px;margin-top:4px;}
+  .confirm-card{background:#060B28;border:1px solid var(--accent2);border-radius:16px;padding:16px;max-width:420px;margin-top:4px;}
   .confirm-title{color:var(--accent2);font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:6px;}
   .confirm-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05);}
   .confirm-label{color:var(--muted);}
@@ -207,8 +207,8 @@
   .otp-row{display:flex;gap:10px;margin-top:16px;}
   .otp-input{flex:1;text-align:center;font-size:22px;font-weight:700;letter-spacing:4px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;padding:14px;color:var(--text);outline:none;font-family:'DM Sans',sans-serif;transition:border-color .2s;}
   .otp-input:focus{border-color:var(--accent);}
-  .verify-btn{width:100%;padding:14px;background:var(--accent);color:#000;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:16px;transition:all .2s;}
-  .verify-btn:hover{background:#fbbf24;transform:translateY(-1px);}
+  .verify-btn{width:100%;padding:14px;background:var(--accent);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:16px;transition:all .2s;}
+  .verify-btn:hover{background:#FF4DAE;transform:translateY(-1px);}
   .verify-note{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;}
   .resend-btn{background:none;border:none;color:var(--accent);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:6px;display:block;text-align:center;width:100%;}
   .otp-toast{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px;margin-top:12px;font-size:13px;text-align:center;color:var(--accent2);display:none;}
@@ -225,7 +225,7 @@
   .bc-ref{font-family:monospace;font-size:13px;color:var(--accent);letter-spacing:1.5px;}
   .bc-status{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;}
   .status-confirmed{background:rgba(16,185,129,.15);color:var(--accent2);border:1px solid rgba(16,185,129,.3);}
-  .status-pending{background:rgba(245,158,11,.15);color:var(--accent);border:1px solid rgba(245,158,11,.3);}
+  .status-pending{background:rgba(233,30,140,.15);color:var(--accent);border:1px solid rgba(233,30,140,.3);}
   .status-past{background:rgba(113,128,150,.15);color:var(--muted);border:1px solid rgba(113,128,150,.3);}
   .bc-body{padding:14px 16px;display:grid;grid-template-columns:1fr 1fr;gap:8px;}
   .bc-row{font-size:13px;}
@@ -278,6 +278,21 @@
     .lang-switcher{gap:2px;}
     .lang-btn{padding:2px 5px;font-size:9px;}
   }
+
+  /* ── API KEY BANNER ── */
+  .api-banner{background:rgba(233,30,140,.12);border-bottom:1px solid rgba(233,30,140,.3);padding:10px 24px;display:flex;align-items:center;gap:10px;font-size:13px;flex-shrink:0;}
+  .api-banner-text{flex:1;color:var(--text);}
+  .api-banner-text strong{color:var(--accent);}
+  .api-banner-btn{padding:6px 14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;}
+  .settings-btn{width:34px;height:34px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:all .2s;flex-shrink:0;}
+  .settings-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .key-input-wrap{position:relative;display:flex;align-items:center;}
+  .key-input-wrap .form-input{padding-right:80px;}
+  .key-toggle{position:absolute;right:10px;background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;padding:4px 6px;}
+  .key-status{display:flex;align-items:center;gap:6px;font-size:12px;margin-top:8px;}
+  .key-dot{width:8px;height:8px;border-radius:50%;}
+  .key-dot.ok{background:var(--accent2);}
+  .key-dot.missing{background:#f87171;}
 </style>
 </head>
 <body>
@@ -300,7 +315,15 @@
       <button class="lang-btn" onclick="setLang('si',this)">සිං</button>
       <button class="lang-btn" onclick="setLang('ta',this)">தமிழ்</button>
     </div>
+    <button class="settings-btn" onclick="openSettings()" title="API Key Settings">⚙️</button>
   </div>
+</div>
+
+<!-- API KEY BANNER (shown when key is missing) -->
+<div class="api-banner" id="api-banner" style="display:none;">
+  <span>🔑</span>
+  <span class="api-banner-text">Add your <strong>Claude API key</strong> to start chatting.</span>
+  <button class="api-banner-btn" onclick="openSettings()">Add Key</button>
 </div>
 
 <!-- CHAT VIEW -->
@@ -819,11 +842,100 @@ function showQuickReplies(replies){
     c.appendChild(btn);});
   chat.appendChild(c);chat.scrollTop=chat.scrollHeight;
 }
+// ── API KEY MANAGEMENT ──
+function getApiKey(){ return localStorage.getItem('yathra_api_key')||''; }
+function setApiKey(k){ if(k) localStorage.setItem('yathra_api_key',k); else localStorage.removeItem('yathra_api_key'); }
+function updateBanner(){
+  const has=!!getApiKey();
+  const b=document.getElementById('api-banner');
+  if(b) b.style.display=has?'none':'flex';
+}
+
+function openSettings(){
+  document.getElementById('settings-modal')?.remove();
+  const key=getApiKey();
+  const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.id='settings-modal';
+  overlay.onclick=e=>{if(e.target===overlay)overlay.remove();};
+  overlay.innerHTML=`
+    <div class="modal" style="max-width:400px;">
+      <div class="modal-header">
+        <div class="modal-title">🔑 Claude API Key</div>
+        <button class="modal-close" onclick="document.getElementById('settings-modal').remove()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">
+          Your key is stored only in your browser's local storage and is never sent anywhere except directly to <strong style="color:var(--text)">api.anthropic.com</strong>.
+        </p>
+        <div class="form-group">
+          <label class="form-label">API Key</label>
+          <div class="key-input-wrap">
+            <input class="form-input" id="api-key-input" type="password"
+              placeholder="sk-ant-api03-…" value="${key}" autocomplete="off" spellcheck="false"/>
+            <button class="key-toggle" onclick="toggleKeyVis()">Show</button>
+          </div>
+        </div>
+        <div class="key-status" id="key-status">
+          <span class="key-dot ${key?'ok':'missing'}"></span>
+          <span style="color:var(--muted)">${key?'Key saved · Ready to chat':'No key set'}</span>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:14px;">
+          Get your key at <strong style="color:var(--accent)">console.anthropic.com</strong> → API Keys.
+        </p>
+      </div>
+      <div class="modal-footer" style="display:flex;gap:8px;">
+        <button class="pay-btn" style="flex:1" onclick="saveApiKey()">💾 Save Key</button>
+        ${key?`<button class="pay-btn" style="flex:0 0 auto;background:#2f1a1a;color:#f87171;border:1px solid #4a2020;" onclick="clearApiKey()">Remove</button>`:''}
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  setTimeout(()=>document.getElementById('api-key-input')?.focus(),100);
+}
+
+function toggleKeyVis(){
+  const inp=document.getElementById('api-key-input');
+  const btn=inp?.nextElementSibling;
+  if(!inp||!btn)return;
+  inp.type=inp.type==='password'?'text':'password';
+  btn.textContent=inp.type==='password'?'Show':'Hide';
+}
+function saveApiKey(){
+  const val=document.getElementById('api-key-input')?.value?.trim();
+  if(!val){document.getElementById('api-key-input')?.classList.add('error');return;}
+  setApiKey(val);
+  updateBanner();
+  document.getElementById('settings-modal')?.remove();
+  addMessage('bot','✅ API key saved! Ask me about any bus route in Sri Lanka.');
+}
+function clearApiKey(){
+  setApiKey('');updateBanner();
+  document.getElementById('settings-modal')?.remove();
+}
+
 async function callClaude(){
+  const apiKey=getApiKey();
+  if(!apiKey){
+    openSettings();
+    addMessage('bot','Please add your Claude API key first (tap ⚙️ in the header).');
+    return;
+  }
   if(isTyping)return;isTyping=true;document.getElementById('sendBtn').disabled=true;showTyping();
   try{
-    const res=await fetch(CLAUDE_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1200,system:systemPrompt,messages:conversationHistory})});
+    const res=await fetch(CLAUDE_API,{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json',
+        'x-api-key':apiKey,
+        'anthropic-version':'2023-06-01',
+        'anthropic-dangerous-direct-browser-access':'true'
+      },
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1200,system:systemPrompt,messages:conversationHistory})
+    });
     const data=await res.json();hideTyping();
+    if(data.error){
+      const msg=data.error.message||'API error';
+      addMessage('bot',`⚠️ ${msg.includes('auth')||msg.includes('key')?'Invalid API key — tap ⚙️ to update it.':msg}`);
+      isTyping=false;document.getElementById('sendBtn').disabled=false;return;
+    }
     const raw=data.content?.[0]?.text||"Sorry, couldn't connect. Please try again.";
     const jm=raw.match(/\|\|\|JSON\s*([\s\S]*?)\s*\|\|\|/);
     const txt=raw.replace(/\|\|\|JSON[\s\S]*?\|\|\|/g,'').trim();
@@ -833,7 +945,7 @@ async function callClaude(){
     conversationHistory.push({role:'assistant',content:raw});
     if(jm)showQuickReplies(['Cheapest option?','Any night buses?','Different date']);
     else if(conversationHistory.length<=3)showQuickReplies(['Colombo to Jaffna tonight','Colombo to Kandy Friday','Kandy to Galle Saturday']);
-  }catch(e){hideTyping();addMessage('bot','Connection issue — please try again.');}
+  }catch(e){hideTyping();addMessage('bot','Connection issue — please check your API key and try again.');}
   isTyping=false;document.getElementById('sendBtn').disabled=false;
 }
 async function sendMessage(){const inp=document.getElementById('userInput');const t=inp.value.trim();if(!t||isTyping)return;inp.value='';inp.style.height='auto';addMessage('user',t);conversationHistory.push({role:'user',content:t});callClaude();}
@@ -861,8 +973,10 @@ if(window.visualViewport){
 }
 
 window.onload=()=>{
+  updateBanner();
   setTimeout(()=>{
-    addMessage('bot','ආයුබෝවන් · வணக்கம் · Welcome to <strong>Yathra</strong> 🚌<br><br>Find, compare, and book long-distance buses across Sri Lanka. Type your route or tap a suggestion below.');
+    const hasKey=!!getApiKey();
+    addMessage('bot','ආයුබෝවන් · வணக்கம் · Welcome to <strong>Yathra</strong> 🚌<br><br>Find, compare, and book long-distance buses across Sri Lanka.'+(hasKey?'<br>Type your route or tap a suggestion below.':'<br>Tap <strong>Add Key</strong> above or ⚙️ to connect your Claude API key.'));
     setTimeout(()=>showQuickReplies(['Colombo to Jaffna tonight','Colombo to Kandy Friday','Kandy to Galle Saturday']),400);
   },300);
 };
